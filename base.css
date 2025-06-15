@@ -1,0 +1,155 @@
+/* css/base.css */
+
+/* Variables */
+:root {
+  --gray-50:  #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-300: #D1D5DB;
+  --gray-600: #4B5563;
+  --gray-800: #1F2937;
+  --blue-600: #2563EB;
+  --blue-700: #1E40AF;
+  --btn-radius: 0.5rem;
+  --container-max: 72rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--gray-800);
+  line-height: 1.6;
+  background: #FFF;
+}
+
+/* Utility Containers */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+.section-light {
+  background: var(--gray-50);
+}
+
+/* Hero */
+.hero {
+  background: var(--gray-50);
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+}
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+@media (min-width: 768px) {
+  .hero h1 { font-size: 3.5rem; }
+}
+.hero p {
+  color: var(--gray-600);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+}
+/* Profile Image */
+.profile-image {
+  display: block;
+  margin: 0 auto var(--space-md);
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-block;
+  background: var(--blue-600);
+  color: #FFF;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--btn-radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+.btn-primary:hover {
+  background: var(--blue-700);
+}
+
+/* Sections */
+section {
+  padding: var(--space-lg) var(--space-sm);
+}
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+/* Services Grid */
+.services-grid {
+  display: grid;
+  gap: var(--space-md);
+}
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card {
+  background: #FFF;
+  padding: var(--space-md);
+  border-radius: var(--btn-radius);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
+}
+.card p {
+  color: var(--gray-600);
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  border-left: 4px solid var(--blue-600);
+  padding-left: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  font-style: italic;
+  color: var(--gray-800);
+}
+.testimonials cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--gray-600);
+}
+
+/* Contact */
+#contact p {
+  margin-bottom: var(--space-sm);
+  color: var(--gray-600);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--space-md) var(--space-sm);
+}
+.footer p:first-child {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.footer p:last-child {
+  color: var(--gray-600);
+}
