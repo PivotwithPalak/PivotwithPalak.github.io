@@ -41,6 +41,7 @@ body {
 
 .hero-image img {
   max-width: 300px;
+  width: 100%;
   border-radius: 8px;
 }
 
@@ -217,4 +218,26 @@ body {
 .visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .footer form input,
+  .footer form textarea {
+    width: 100%;
+  }
+  .cta {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
 }
