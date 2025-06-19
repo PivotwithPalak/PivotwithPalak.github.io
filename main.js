@@ -9,7 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-const text = "Hi, I'm Palak Seth";
+const text = "Grow with me🚀";
 let i = 0;
 
 function typeWriter() {

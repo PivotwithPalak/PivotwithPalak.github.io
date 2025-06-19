@@ -8,7 +8,7 @@ body {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background: #2e7d32;
+  background: #0d3b3f;
   padding: 1rem 2rem;
   color: white;
 }
@@ -27,16 +27,21 @@ body {
 .hero {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   padding: 3rem 2rem;
-  background: #f4f4f4;
+  align-items: center;
+  text-align: center;
+   /* #f4f4f4 */
+  background-color: #f4f4f4;
   flex-wrap: wrap;
 }
 
 .hero-text {
   flex: 1;
   padding-right: 2rem;
+  max-width: 700px;
+  animation: fadeIn 1.5s ease;
 }
 
 .hero-image img {
@@ -55,7 +60,7 @@ body {
 
 .framed-img-alt {
   max-width: 280px;
-  border: 3px dashed #c8e6c9;
+  border: 3px dashed #0d3b3f;
   border-radius: 8px;
 }
 
@@ -63,7 +68,7 @@ body {
 .cta {
   display: inline-block;
   margin-top: 1rem;
-  background: #32cd32;
+  background: #0d3b3f;
   color: white;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -74,7 +79,7 @@ body {
   transform: scale(1.05);
 }
 .cta.dark {
-  background: rgb(223, 172, 5);
+  background: #DFAC05;
 }
 
 .about {
@@ -148,35 +153,20 @@ body {
 }
 
 .footer {
-  background: #2e7d32;
+  background: #0d3b3f;
   color: white;
   padding: 2rem;
   text-align: center;
 }
 
-.footer form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.footer input,
-.footer textarea {
-  width: 80%;
-  padding: 0.7rem;
-  border-radius: 5px;
-  border: none;
-}
-
-.footer textarea {
-  min-height: 100px;
-  resize: vertical;
+.footer a {
+  color: #dcedc8;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .footer button {
-  background: rgb(223, 172, 5);
+  background: #DFAC05;
   padding: 0.7rem 1.5rem;
   color: white;
   border: none;
@@ -240,4 +230,26 @@ body {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
+}
+
+.horizontal-list {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none; /* removes bullets */
+  padding: 0;
+  margin: 1rem 0;
+  flex-wrap: wrap; /* makes it mobile-friendly */
+}
+
+.horizontal-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.horizontal-list i {
+  margin-right: 0.5rem;
+  color: #2e7d32; /* green for branding */
 }
